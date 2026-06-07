@@ -124,5 +124,7 @@ model = load_model(MODEL_PATH)
 
 
 if __name__ == "__main__":
-    # Use a simple dev server. In production use a WSGI server like gunicorn.
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    # Use a simple dev server. For deployment (e.g. Render), read the port from
+    # the environment. Render sets the PORT environment variable for your service.
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
