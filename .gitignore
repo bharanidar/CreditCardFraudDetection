@@ -1,0 +1,16 @@
+# Ignore the dataset file (large file, not included in repository)
+dataset/creditcard.csv
+
+# Python virtual environment
+venv/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# macOS files
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+dataset/creditcard.csv
